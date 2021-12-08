@@ -20,9 +20,7 @@ This is the file to test all your task, 0 to 20, for the simple_shell project
 All task are covered, exept task 13, 14 and 17
 
 ## How to use: 
-Change in the config file, the name of you're executable file, then you can check
-Do chmod +x *.sh in the directory, then it's free to use
-Also, some task need to get acces to all your .c file, he will be mentionned.
+Change in the config file, the name of you're executable file, then you can check. Do chmod +x *.sh in the directory, then it's free to use. Also, some task need to get acces to all your .c file, he will be mentionned.
 
 ### AUTHORS :
 
