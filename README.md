@@ -1,8 +1,7 @@
-# 0X16.C - Simple_shell
+# 0X16.TEST .C - Tests_Simple_shell
 
 ![](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/235/shell.jpeg)
-### S/o Julien Barbier
-## Simple shell :
+## Simple shell Tests:
 ```
 Holberton School 
 ```
