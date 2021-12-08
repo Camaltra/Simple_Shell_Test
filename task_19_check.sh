@@ -1,0 +1,173 @@
+#!/bin/bash
+
+#######################################
+##
+##        /bin/ls command test
+##
+######################################
+
+echo ============ /bin/ls ==============
+command="#"
+
+rm -f hsh_check.txt sh_check.txt
+touch hsh_check.txt sh_check.txt
+
+echo -e "$command" | $SHELL > hsh_check.txt 2> /dev/null &
+echo -e "$command" | sh > sh_check.txt 2> /dev/null &
+
+sleep 1
+
+if cmp -s "hsh_check.txt" "sh_check.txt"
+then
+    echo "# : OK"
+else
+    echo "# : ERROR"
+fi
+
+
+
+
+
+command="    #"
+
+rm -f hsh_check.txt sh_check.txt
+touch hsh_check.txt sh_check.txt
+
+echo -e "$command" | $SHELL > hsh_check.txt 2> /dev/null &
+echo -e "$command" | sh > sh_check.txt 2> /dev/null &
+
+sleep 1
+
+if cmp -s "hsh_check.txt" "sh_check.txt"
+then
+    echo "    # : OK"
+else
+    echo "    # : ERROR"
+fi
+
+
+
+
+command="#ls"
+
+rm -f hsh_check.txt sh_check.txt
+touch hsh_check.txt sh_check.txt
+
+echo -e "$command" | $SHELL > hsh_check.txt 2> /dev/null &
+echo -e "$command" | sh > sh_check.txt 2> /dev/null &
+
+sleep 1
+
+if cmp -s "hsh_check.txt" "sh_check.txt"
+then
+    echo "#ls : OK"
+else
+    echo "#ls : ERROR"
+fi
+
+
+
+
+
+command="ls -#l"
+
+rm -f hsh_check.txt sh_check.txt
+touch hsh_check.txt sh_check.txt
+
+echo -e "$command" | $SHELL > hsh_check.txt 2> /dev/null &
+echo -e "$command" | sh > sh_check.txt 2> /dev/null &
+
+sleep 1
+
+if cmp -s "hsh_check.txt" "sh_check.txt"
+then
+    echo "ls -#l : OK"
+else
+    echo "ls -#l : ERROR"
+fi
+
+
+
+
+command="  ls ########### ls"
+
+rm -f hsh_check.txt sh_check.txt
+touch hsh_check.txt sh_check.txt
+
+echo -e "$command" | $SHELL > hsh_check.txt 2> /dev/null &
+echo -e "$command" | sh > sh_check.txt 2> /dev/null &
+
+sleep 1
+
+if cmp -s "hsh_check.txt" "sh_check.txt"
+then
+    echo "  ls ########### ls : OK"
+else
+    echo "  ls ########### ls : ERROR"
+fi
+
+
+
+
+
+command="ls -#l"
+
+rm -f hsh_check.txt sh_check.txt
+touch hsh_check.txt sh_check.txt
+
+echo -e "$command" | $SHELL > hsh_check.txt 2> /dev/null &
+echo -e "$command" | sh > sh_check.txt 2> /dev/null &
+
+sleep 1
+
+if cmp -s "hsh_check.txt" "sh_check.txt"
+then
+    echo "ls -#l : OK"
+else
+    echo "ls -#l : ERROR"
+fi
+
+
+
+
+command="ls -l#a"
+
+rm -f hsh_check.txt sh_check.txt
+touch hsh_check.txt sh_check.txt
+
+echo -e "$command" | $SHELL > hsh_check.txt 2> /dev/null &
+echo -e "$command" | sh > sh_check.txt 2> /dev/null &
+
+sleep 1
+
+if cmp -s "hsh_check.txt" "sh_check.txt"
+then
+    echo "ls -l#a : OK"
+else
+    echo "ls -l#a : ERROR"
+fi
+
+
+
+
+command="ls -l #a"
+
+rm -f hsh_check.txt sh_check.txt
+touch hsh_check.txt sh_check.txt
+
+echo -e "$command" | $SHELL > hsh_check.txt 2> /dev/null &
+echo -e "$command" | sh > sh_check.txt 2> /dev/null &
+
+sleep 1
+
+if cmp -s "hsh_check.txt" "sh_check.txt"
+then
+    echo "ls -l #a : OK"
+else
+    echo "ls -l #a : ERROR"
+fi
+
+
+
+rm -f hsh_check.txt sh_check.txt
+echo ============ end ==============
